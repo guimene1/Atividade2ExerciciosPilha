@@ -1,0 +1,62 @@
+#1
+def soma(n):
+  if n == 1:
+    return 1
+  else:
+    return n + soma(n - 1)
+n = int(input("Digite um numero para a soma:"))
+somas = soma(n)
+print("A soma dos primeiros",n,"numeros é:",somas)
+print("\n")
+#2
+def fatorial(p):
+  if p == 0:
+    return 1
+  else:
+    return p * fatorial(p - 1)
+
+num = int(input("Digite um numero para visualizar seu fatorial:"))
+fator = fatorial(num)
+print("O numero fatorial de",num,"é:",fator)
+print("\n")
+#3
+def inversao(palavra):
+  return palavra[::-1]
+pala = input("Digite o que deseja inverter:")
+inversion = inversao(pala)
+print("A inversão fica:",inversion)
+print("\n")
+#4
+def binaria(decimal):
+  some = " "
+  while decimal > 0:
+    binari = decimal%2
+    some = str(binari) + some
+    decimal = decimal//2
+
+  return some
+
+decimal = int(input("Digite o numero decimal que deseja converter para binário:"))
+print("O numero",decimal,"convertido em binário fica:",binaria(decimal))
+print("\n")
+#5
+def criarTexto():
+  texto = []
+  return texto
+def escrever(texto, palavra):
+  texto.append(palavra)
+
+def apagar(texto):
+  texto.pop()
+
+def mostrar(texto):
+  texto = str(texto).replace("'","").replace("[","").replace("]","").replace(",","")
+  print(texto)
+  return texto
+
+texto = criarTexto()
+escrever(texto,"Hello,")
+escrever(texto,"world!")
+apagar(texto)
+escrever(texto,"guri")
+mostrar(texto)
